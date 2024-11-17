@@ -1,8 +1,10 @@
-import java.awt.print.Book;
+package musicOperation;
+
 import java.util.Scanner;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+
 public class Main {
     public static void main(String[] args) {
         Scanner input= new Scanner(System.in);
@@ -25,9 +27,8 @@ public class Main {
                     String name=input.nextLine();
                     System.out.println("Enter the author name: ");
                     String authorname=input.nextLine();
-                    MusicInterface.
             }
 
         }
     }
-            }
+}

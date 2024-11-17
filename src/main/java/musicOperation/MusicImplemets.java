@@ -1,3 +1,5 @@
+package musicOperation;
+
 public class MusicImplemets implements MusicInterface{
 
     Music [] musics=new Music[10];
@@ -30,6 +32,7 @@ public class MusicImplemets implements MusicInterface{
 
     @Override
     public Music getMusic(int id) {
+
         return null;
     }
 
@@ -44,6 +47,5 @@ public class MusicImplemets implements MusicInterface{
                 System.out.println("Musiqi silinmədi: "+" "+"Music wasn't deleted: ");
             }
         }
-
     }
 }
