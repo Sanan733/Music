@@ -1,34 +1,33 @@
 package musicOperation;
 
-public class MusicImplemets implements MusicInterface{
+public class MusicImplemets implements MusicInterface {
 
-    Music [] musics=new Music[10];
-    private int currentcount=0;
+    Music[] musics = new Music[5];
+    private int currentcount = 0;
 
     @Override
     public void addMusic(Music music) {
-        if (currentcount< musics.length){
+        if (currentcount < musics.length) {
             musics[currentcount++] = music;
-            System.out.println("Musiqi elave olundu: ");
-        }
-        else {
-            System.out.println("Boş yer yoxdur: ");
+            System.out.println("Music added: ");
+        } else {
+            System.out.println("empty is not found: ");
         }
     }
 
     @Override
-    public void uptade(int id, String name, String author) {
-        for (int i=0 ; i<currentcount ; i++){
-            if (musics[i].getId()==id){
-                musics[i].setName();
-                musics[i].setSingername();
+    public void uptade(int id, String name, String singername) {
+        for (int i = 0; i < currentcount; i++) {
+            if (musics[i].getId() == id) {
+                musics[i].setSingername(singername);
+                musics[i].setName(name);
+                System.out.println("Music added");
                 return;
             }
-            else {
-                System.out.println("Id doesn't found: ");
-            }
         }
+        System.out.println("Music is not found: " + id + " ");
     }
+
 
     @Override
     public Music getMusic(int id) {
@@ -38,13 +37,12 @@ public class MusicImplemets implements MusicInterface{
 
     @Override
     public void deleteMusic(int id) {
-        for (int i=0 ; i<currentcount ; i++){
-            if (musics[i].getId()==id){
+        for (int i = 0; i < currentcount; i++) {
+            if (musics[i].getId() == id) {
                 currentcount--;
-                System.out.println("Musiqi silindi: "+" "+"Music was deleted: ");
-            }
-            else {
-                System.out.println("Musiqi silinmədi: "+" "+"Music wasn't deleted: ");
+                System.out.println("Musiqi silindi: " + " " + "Music was deleted: ");
+            } else {
+                System.out.println("Musiqi silinmədi: " + " " + "Music wasn't deleted: ");
             }
         }
     }

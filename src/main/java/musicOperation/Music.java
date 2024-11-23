@@ -17,7 +17,7 @@ public class Music {
         return singername;
     }
 
-    public void setSingername() {
+    public void setSingername(String singername) {
         this.singername = singername;
     }
 
@@ -25,7 +25,7 @@ public class Music {
         return name;
     }
 
-    public void setName() {
+    public void setName(String name) {
         this.name = name;
     }
 
